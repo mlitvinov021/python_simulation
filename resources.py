@@ -11,3 +11,9 @@ class Airport:
         self.ticket_booth = simpy.Resource(env, num_booths)
         self.check_in = simpy.Resource(env, num_check_ins)
         self.passport_control = simpy.Resource(env, num_passport_controls)
+
+class Flight:
+    def __init__(self, destination, time, gate):
+        self.destination = destination
+        self.time = time
+        self.gate = gate
